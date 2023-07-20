@@ -1,0 +1,119 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: normal;
+    color: floralwhite;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+}
+
+header img {
+    width: 130px;
+    margin-left: 20px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /*background: linear-gradient(to right, rgb(10 10 10), rgb(35 35 35));*/
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    background-color: rgb(30 30 30);
+    width: 450px;
+    height: min-content;
+    margin-top: 10vh;
+    border-radius: .65em;
+
+    box-shadow: inset 4px 4px 4px rgba(255,255,255,.1);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgba(35, 35, 35, .75);
+    border-radius: 10px;
+    margin: 2px;
+
+    box-shadow: inset 3px 3px 5px rgba(255,255,255,.1), 5px 5px 20px rgb(0,0,0,.5);
+}
+button {
+    transition: background-color .05s;
+}
+
+.calculator-grid > button:active {
+    background-color: rgb(20 20 20);
+    box-shadow: inset 6px 6px 10px rgba(10,10,10,1), inset -1.5px -1.5px 8px rgba(245,245,245,.15);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(45, 45, 45, .86);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+
+    box-shadow: inset 5px 8px 6px rgba(0,0,0, .5);
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .80);
+    font-size: 1.2rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Poppins Medium", serif;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.copyright span{
+    font-weight: bold;
+    color: #0d106e
+}
